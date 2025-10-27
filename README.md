@@ -8,7 +8,8 @@ Trained entirely in **Google Colab** using the Hugging Face ecosystem.
 ---
 
 // The Objective
-Adapt a pre-trained LLaMA model to recognise SQL-specific syntax and structure when given plain-English prompts.
+
+To adapt a pre-trained LLaMA model to recognise SQL-specific syntax and structure when given plain-English prompts.
 
 >  “Show all transactions after June 2022.”  
 >  → outputs text resembling a SQL query structure (`SELECT ... FROM ... WHERE ...`)
@@ -59,7 +60,7 @@ These confirm the fine-tuning effectively biased the model toward SQL language f
 
 ---
 
-// Runming the Notebook
+// Running the Notebook!
 
 Open directly in Colab:  
 X

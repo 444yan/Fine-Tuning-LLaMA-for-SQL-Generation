@@ -1,18 +1,15 @@
 // Fine-Tuning LLaMA for SQL Generation
 
-This notebook fine-tunes a **LLaMA-based Transformer** to produce **SQL-style text** from natural-language instructions.  
-The goal was to explore domain adaptation.
-
-Trained entirely in **Google Colab** using the Hugging Face ecosystem.
-
----
+This project fine-tunes a LLaMA-based Transformer to translate natural-language instructions into SQL-style text, demonstrating how large language models can be adapted for structured query tasks.
+It highlights the power of fine-tuning to turn a general-purpose model into a domain specialist, enabling users to generate SQL commands from plain English without prior knowledge of SQL.
+Developed and trained entirely in Google Colab using Hugging Face and PEFT, the project focuses on efficient training techniques such as LoRA, designed for environments with limited computational resources.
 
 // The Objective
 
-To adapt a pre-trained LLaMA model to recognise SQL-specific syntax and structure when given plain-English prompts.
+To adapt a pre-trained LLaMA model to recognise and output SQL-specific syntax and structure when given plain-English prompts.
 
 >  “Show all transactions after June 2022.”  
->  → outputs text resembling a SQL query structure (`SELECT ... FROM ... WHERE ...`)
+>  → outputs SELECT * FROM transactions WHERE date > '2022-06-01';
 
 ---
 
@@ -63,7 +60,7 @@ These confirm the fine-tuning effectively biased the model toward SQL language f
 // Running the Notebook!
 
 Open directly in Colab:  
-X
+👉 https://colab.research.google.com/github/444yan/Fine-Tuning-LLAMA-for-SQL-Generation/blob/main/Fine_tuning_Llama_for_SQL.ipynb
 
  Future Work
 - **Train on the full dataset:** Expanding beyond the 1 000-sample subset would expose the model to a wider range of SQL query patterns and improve generalisation.  
